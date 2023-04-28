@@ -1,4 +1,4 @@
-# Base Apparel Coming Soon Page
+# Intro Component With Sign-up Form
 
 Responsive Front-End Mentor Challenge Using Pure HTML + CSS + JavaScript
 
