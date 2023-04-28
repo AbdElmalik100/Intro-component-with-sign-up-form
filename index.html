@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Normalize File -->
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <!-- Fontawesome File -->
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <!-- Main File -->
+    <link rel="stylesheet" href="CSS/master.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+    <title>Challenge 5</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="text">
+                <h1>Learn to code by watching others</h1>
+                <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
+            </div>
+            <div class="sign-up-box">
+                <div>Try it free 7 days <span> then $20/mo. thereafter</span></div>
+                <form action="">
+                    <div class="fields" data-error="First Name cannot be empty">
+                        <input type="text" name="firstname" placeholder="First Name" maxlength="30">
+                        <img class="error-icon" src="images/icon-error.svg" alt="">
+                    </div>
+                    <div class="fields" data-error="Last Name cannot be empty">
+                        <input type="text" name="lastname" placeholder="Last Name" maxlength="30">
+                        <img class="error-icon" src="images/icon-error.svg" alt="">
+                    </div>
+                    <div class="fields" data-error="Looks like this is not an email" >
+                        <input type="text" name="email" placeholder="Email Adress" maxlength="50">
+                        <img class="error-icon" src="images/icon-error.svg" alt="">
+                    </div>
+                    <div class="fields" data-error="Password cannot be empty">
+                        <input type="password" name="password" placeholder="Password" maxlength="50">
+                        <img class="error-icon" src="images/icon-error.svg" alt="">
+                    </div>
+                    <input class="btn" type="submit" name="submit" value="Claim your free trail">
+                    <div class="terms">By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="JavaScript/master.js"></script>
+</body>
+</html>

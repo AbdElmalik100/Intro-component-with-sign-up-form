@@ -1,0 +1,202 @@
+/* Global Rules */
+* {
+    box-sizing: border-box;
+}
+:root {
+    /* Primary Colors */
+    --Red: hsl(0, 100%, 74%);
+    --Green: hsl(154, 59%, 51%);
+
+    /* Accent */
+    --Blue: hsl(248, 32%, 49%);
+
+    /* Second Colors */
+    --Dark-Blue: hsl(249, 10%, 26%) ;
+    --Grayish-Blue: hsl(246, 25%, 77%);
+}
+body {
+    Font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    background-image: url(../images/bg-intro-desktop.png);
+    background-size: cover;
+    background-color: var(--Red);
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow: hidden;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+}
+
+/* Grid System */
+@media (min-width: 576px) { /* Small Devices => Landscape Phones */
+    .container {
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px) { /* Medium Devices => Tablets */
+    .container {
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px) { /* Desktops */
+    .container {
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px) { /* Large Screens */
+    .container {
+        max-width: 1140px;
+    }
+}
+
+.box {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    align-items: center;
+    gap: 50px;
+}
+.box .text h1 {
+    color: white;
+    font-size: 40px;
+}
+.box .text p {
+    width: 500px;
+    color: #ffffffc4;
+    line-height: 1.8;
+    font-weight: 500;
+}
+.box .sign-up-box > div {
+    width: max-content;
+    padding: 20px 100px;
+    background-color: var(--Blue);
+    color: white;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 2px #00000069;
+    font-weight: 500;
+}
+.box .sign-up-box > div > span {
+    color: var(--Grayish-Blue);
+    font-weight: initial;
+}
+.box .sign-up-box form {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+}
+.box .sign-up-box form > div{
+    position: relative;
+}
+.box .sign-up-box form > div::after {
+    content: attr(data-error);
+    position: relative;
+    left: 60%;
+    font-size: 12px;
+    color: var(--Red);
+    font-weight: 500;
+    font-style: italic;
+    bottom: 10px;
+    display: none;
+}
+.box .sign-up-box form > div.invalid::after {
+    display: block;
+}
+.box .sign-up-box form > div img {
+    position: absolute;
+    top: 32%;
+    transform: translateY(-50%);
+    right: 25px;
+    display: none;
+}
+.box .sign-up-box form > div img.invalid {
+    display: block;
+}
+.box .sign-up-box form input {
+    padding: 17px 40px;
+    width: 100%;
+    margin-bottom: 15px;
+    border: 1px solid #0000002b;
+    border-radius: 5px;
+}
+.box .sign-up-box form input.invalid {
+    border: 1px solid var(--Red);
+}
+.box .sign-up-box form input:focus {
+    outline: 1px solid var(--Dark-Blue);
+}
+.box .sign-up-box form input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    font-size: 13px;
+}
+.box .sign-up-box form input.invalid::placeholder {
+    color: var(--Red);
+}
+.box .sign-up-box form .btn {
+    color: white;
+    background-color: var(--Green);
+    box-shadow: inset 0px -3px 5px hsl(154deg 41% 42%);
+    cursor: pointer;
+    transition: 0.5s;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.box .sign-up-box form .btn:hover {
+    background-color: hsl(154, 84%, 64%);
+}
+.box .sign-up-box form .terms {
+    font-size: 12px;
+    text-align: center;
+    color: var(--Grayish-Blue);
+}
+.box .sign-up-box form .terms > a {
+    color: var(--Red);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+@media (max-width: 575px) {
+    body {
+        overflow: visible;
+        background-image: url(../images/bg-intro-mobile.png);
+    }
+    .box {
+        flex-direction: column;
+        transform: none;
+        position: relative;
+        left: initial;
+        padding: 100px 0;
+    }
+    .text {
+        text-align: center;
+    }
+    .box .text h1 {
+        line-height: 1.5;
+        font-size: 30px;
+    }
+    .box .text p {
+        width: initial;
+        font-size: 18px;
+    }
+    .box .sign-up-box > div {
+        width: initial;
+        padding: 20px 60px;
+        text-align: center;
+    }
+    .box .sign-up-box form {
+        padding: 25px;
+    }
+    .box .sign-up-box form > div::after {
+        left: 42%;
+    }
+    .box .sign-up-box form .terms {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+}
